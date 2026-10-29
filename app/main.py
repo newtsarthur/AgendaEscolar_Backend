@@ -64,9 +64,9 @@ def health():
     return {"status": "ok", "database": "connected" if db_ok else "unavailable"}
 
 
-app.include_router(auth.router, prefix="/api")
-app.include_router(tasks.router, prefix="/api")
-app.include_router(materials.router, prefix="/api")
-app.include_router(questions.router, prefix="/api")
-app.include_router(essays.router, prefix="/api")
-app.include_router(seed.router, prefix="/api")
+app.include_router(auth.router)
+app.include_router(tasks.router)
+app.include_router(materials.router)
+app.include_router(questions.router)
+app.include_router(essays.router)
+app.include_router(seed.router)
